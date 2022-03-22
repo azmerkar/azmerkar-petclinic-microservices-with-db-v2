@@ -105,7 +105,13 @@
             <id>buildDocker</id>
             <build>
                 <plugins>
+
                     <plugin>
+                        <groupId>com.spotify</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                        <version>${docker.plugin.version}</version>
+                    </plugin>
+                                        <plugin>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.8.2</version>
@@ -125,11 +131,6 @@
         </execution>
     </executions>
 </plugin>
-                    <plugin>
-                        <groupId>com.spotify</groupId>
-                        <artifactId>docker-maven-plugin</artifactId>
-                        <version>${docker.plugin.version}</version>
-                    </plugin>
                 </plugins>
             </build>
         </profile>
