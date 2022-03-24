@@ -2054,7 +2054,7 @@ git push origin dev
 - Create `feature/msp-18` branch from `dev`.
 
 ```bash
-git checkout dev
+git checkou
 git branch feature/msp-18
 git checkout feature/msp-18
 ```
