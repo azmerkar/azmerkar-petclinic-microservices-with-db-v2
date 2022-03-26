@@ -3008,7 +3008,7 @@ kubectl create namespace cattle-system
 ```bash
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
-  --set hostname=rancher.clarusway.us \
+  --set hostname=mehmet.karadayi.link \
   --set tls=external \
   --set replicas=1
 ```
@@ -3223,7 +3223,7 @@ helm plugin install https://github.com/hypnoglow/helm-s3.git
 * Initialize the Amazon S3 Helm repository.
 
 ```bash
-AWS_REGION=us-east-1 helm s3 init s3://petclinic-helm-charts/stable/myapp 
+AWS_REGION=us-east-1 helm s3 init s3://petclinicmk-helm-charts/stable/myapp 
 ```
 
 * The command creates an index.yaml file in the target to track all the chart information that is stored at that location.
