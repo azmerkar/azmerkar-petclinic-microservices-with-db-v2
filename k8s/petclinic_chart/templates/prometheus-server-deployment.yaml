@@ -30,11 +30,11 @@ spec:
           name: prometheus-server
           ports:
             - containerPort: 9090
-          resources: {}
-      initContainers:
+       initContainers:
       - name: init-discovery-server
         image: busybox
-        command: ['sh', '-c', 'until nc -z discovery-server:8761; do echo waiting for discovery-server; sleep 2; done;']
+        command: ['sh', '-c', 'until nc -z discovery-server:8761; do echo waiting for discovery-server; sleep 2; done;']         resources: {}
+
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always
