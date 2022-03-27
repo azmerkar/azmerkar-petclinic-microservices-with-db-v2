@@ -6,7 +6,7 @@ pipeline {
         APP_REPO_NAME="clarusway-repo/petclinic-app-prod"
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
         AWS_REGION="us-east-1"
-        ECR_REGISTRY="$266766150282.dkr.ecr.us-east-1.amazonaws.com"
+        ECR_REGISTRY="266766150282.dkr.ecr.us-east-1.amazonaws.com"
         RANCHER_URL="https://mehmet.karadayi.link"
         // Get the project-id from Rancher UI (petclinic-cluster-staging namespace, View in API, copy projectId )
         RANCHER_CONTEXT="c-wt8dw:p-79nc5" 
