@@ -3008,7 +3008,7 @@ kubectl create namespace cattle-system
 ```bash
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
-  --set hostname=mehmet.karadayi.link \
+  --set hostname=rancher.karadayi.link \
   --set tls=external \
   --set replicas=1
 ```
@@ -3231,13 +3231,13 @@ AWS_REGION=us-east-1 helm s3 init s3://petclinicmk-helm-charts/stable/myapp
 * Verify that the index.yaml file was created.
 
 ```bash
-aws s3 ls s3://petclinic-helm-charts/stable/myapp/
+aws s3 ls s3://petclinicmk-helm-charts/stable/myapp/
 ```
 
 * Add the Amazon S3 repository to Helm on the client machine. 
 
 ```bash
-AWS_REGION=us-east-1 helm repo add stable-petclinicapp s3://petclinic-helm-charts/stable/myapp/
+AWS_REGION=us-east-1 helm repo add stable-petclinicapp s3://petclinicmk-helm-charts/stable/myapp/
 ```
 
 * Update `version` field of `k8s/petclinic_chart/Chart.yaml` file as below for testing.
