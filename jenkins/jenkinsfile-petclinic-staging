@@ -7,19 +7,11 @@ pipeline {
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
         AWS_REGION="us-east-1"
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-<<<<<<< HEAD
-        RANCHER_URL="https://mehmet.karadayi.link"
-        // Get the project-id from Rancher UI (petclinic-cluster-staging namespace, View in API, copy projectId )
-        RANCHER_CONTEXT="c-smqbh:p-fnbrc" 
-       //First part of projectID
-        CLUSTERID="c-smqbh"
-=======
         RANCHER_URL="https://rancher.karadayi.link"
         // Get the project-id from Rancher UI (petclinic-cluster-staging namespace, View in API, copy projectId )
         RANCHER_CONTEXT="c-fhrqr:p-j7q9m" 
        //First part of projectID
         CLUSTERID="p-j7q9m"
->>>>>>> feature/msp-26
         RANCHER_CREDS=credentials('rancher-petclinic-credentials')
     }
     stages {
